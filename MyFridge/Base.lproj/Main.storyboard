@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan Barcode View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ScanBarcodeViewController" customModule="MyFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSl-CE-sPa">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Varenavn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipX-iY-MMZ">
+                                        <rect key="frame" x="16" y="16" width="343" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Jsx-lA-r1N"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xma-Pn-xzi">
+                                        <rect key="frame" x="16" y="69" width="49.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="Agf-Sk-elB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="H2i-tG-DIc">
+                                        <rect key="frame" x="265" y="67" width="94" height="29"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gBc-Gk-Rxt"/>
+                                        </connections>
+                                    </stepper>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx4-Xo-HqH" userLabel="CancelButton">
+                                        <rect key="frame" x="16" y="138" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="HL8-cb-Lsw"/>
+                                            <constraint firstAttribute="height" constant="48" id="nEC-NS-2Hl"/>
+                                        </constraints>
+                                        <state key="normal" image="CircleCancel"/>
+                                        <connections>
+                                            <action selector="buttonCancelClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Of0-EZ-Ttj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIW-cO-iBn" userLabel="SaveButton">
+                                        <rect key="frame" x="311" y="138" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="4zK-cy-8S3"/>
+                                            <constraint firstAttribute="width" constant="48" id="lY3-y1-Aaf"/>
+                                        </constraints>
+                                        <state key="normal" image="CircleSave"/>
+                                        <connections>
+                                            <action selector="buttonSaveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZH-Ah-elc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.46274509803921571" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ipX-iY-MMZ" secondAttribute="trailing" constant="16" id="6do-dY-PJF"/>
+                                    <constraint firstAttribute="height" constant="200" id="AlP-DI-bpC"/>
+                                    <constraint firstAttribute="bottom" secondItem="xma-Pn-xzi" secondAttribute="bottom" constant="110" id="Ctn-qg-Yqa"/>
+                                    <constraint firstAttribute="trailing" secondItem="H2i-tG-DIc" secondAttribute="trailing" constant="16" id="Ngs-CW-HUS"/>
+                                    <constraint firstAttribute="bottom" secondItem="H2i-tG-DIc" secondAttribute="bottom" constant="107" id="QCS-VU-mr4"/>
+                                    <constraint firstItem="xma-Pn-xzi" firstAttribute="top" secondItem="ipX-iY-MMZ" secondAttribute="bottom" constant="18" id="RLz-gb-sE6"/>
+                                    <constraint firstItem="H2i-tG-DIc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="xma-Pn-xzi" secondAttribute="trailing" constant="215" id="RSM-Mp-Arz"/>
+                                    <constraint firstItem="ipX-iY-MMZ" firstAttribute="top" secondItem="HSl-CE-sPa" secondAttribute="top" constant="16" id="Tpd-Wh-JeS"/>
+                                    <constraint firstAttribute="bottom" secondItem="TIW-cO-iBn" secondAttribute="bottom" constant="14" id="VUh-ZI-lP8"/>
+                                    <constraint firstAttribute="bottom" secondItem="nx4-Xo-HqH" secondAttribute="bottom" constant="14" id="VYe-pw-9X0"/>
+                                    <constraint firstItem="xma-Pn-xzi" firstAttribute="leading" secondItem="HSl-CE-sPa" secondAttribute="leading" constant="16" id="bt9-b6-u1D"/>
+                                    <constraint firstItem="nx4-Xo-HqH" firstAttribute="leading" secondItem="HSl-CE-sPa" secondAttribute="leading" constant="16" id="dFO-Xd-ube"/>
+                                    <constraint firstItem="ipX-iY-MMZ" firstAttribute="leading" secondItem="HSl-CE-sPa" secondAttribute="leading" constant="16" id="fBk-cy-xhM"/>
+                                    <constraint firstItem="H2i-tG-DIc" firstAttribute="top" secondItem="ipX-iY-MMZ" secondAttribute="bottom" constant="16" id="swH-hl-4oe"/>
+                                    <constraint firstAttribute="trailing" secondItem="TIW-cO-iBn" secondAttribute="trailing" constant="16" id="vzC-DD-0ka"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HSl-CE-sPa" secondAttribute="trailing" id="Ajq-Oa-Pz9"/>
+                            <constraint firstItem="HSl-CE-sPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nm4-Zp-buL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HSl-CE-sPa" secondAttribute="bottom" id="gWM-8D-npZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="barcodeView" destination="HSl-CE-sPa" id="9Hr-kF-YKZ"/>
+                        <outlet property="barcodeViewConstraint" destination="gWM-8D-npZ" id="Yxs-7p-wcx"/>
+                        <outlet property="itemNameTextField" destination="ipX-iY-MMZ" id="fss-SJ-tME"/>
+                        <outlet property="itemQuantityLabel" destination="xma-Pn-xzi" id="rUQ-iD-xSF"/>
+                        <outlet property="itemQuantityStepper" destination="H2i-tG-DIc" id="ZwQ-gY-zXG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CircleCancel" width="48" height="48"/>
+        <image name="CircleSave" width="48" height="48"/>
+    </resources>
+</document>
