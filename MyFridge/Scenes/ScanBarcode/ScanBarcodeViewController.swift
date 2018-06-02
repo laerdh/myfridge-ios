@@ -24,6 +24,7 @@ class ScanBarcodeViewController: UIViewController, ScanBarcodeDisplayLogic {
     @IBOutlet weak var itemNameTextField: UITextField!
     @IBOutlet weak var itemQuantityStepper: UIStepper!
     @IBOutlet weak var itemQuantityLabel: UILabel!
+    @IBOutlet weak var itemBarcodeLabel: UILabel!
     
     var isDisplayingBarcode: Bool = false
     
@@ -155,7 +156,7 @@ class ScanBarcodeViewController: UIViewController, ScanBarcodeDisplayLogic {
         }
         
         isDisplayingBarcode = true
-        itemNameTextField.text = viewModel.barcodeValue
+        itemBarcodeLabel.text = viewModel.barcodeValue
     
         UIView.animate(withDuration: 0.3, animations: {
             self.view.bringSubview(toFront: self.barcodeView)
@@ -207,7 +208,7 @@ class ScanBarcodeViewController: UIViewController, ScanBarcodeDisplayLogic {
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        itemQuantityLabel.text = "\(sender.value)"
+        itemQuantityLabel.text = "\(Int(sender.value))"
     }
     
     @IBAction func buttonCancelClicked(_ sender: UIButton) {
