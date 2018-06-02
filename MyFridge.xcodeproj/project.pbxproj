@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643F12E1CE25D8CB81E794B9 /* Pods_MyFridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727B961CAEB4A53865B62D61 /* Pods_MyFridgeTests.framework */; };
+		75357915EA747D7523AD1572 /* Pods_MyFridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C82EF2B4364578EFCCC61DB /* Pods_MyFridgeUITests.framework */; };
+		D19F3EB8B749E12BB2A83FE3 /* Pods_MyFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBC0B1466F20F5826108C2E /* Pods_MyFridge.framework */; };
 		EF31DC7D20C1D28100766767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31DC7C20C1D28100766767 /* AppDelegate.swift */; };
 		EF31DC8220C1D28100766767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF31DC8020C1D28100766767 /* Main.storyboard */; };
 		EF31DC8420C1D28200766767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF31DC8320C1D28200766767 /* Assets.xcassets */; };
@@ -19,6 +22,7 @@
 		EF31DCC720C1DD2E00766767 /* ScanBarcodeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31DCC120C1DD2E00766767 /* ScanBarcodeModels.swift */; };
 		EF31DCC820C1DD2E00766767 /* ScanBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31DCC220C1DD2E00766767 /* ScanBarcodeViewController.swift */; };
 		EF31DCC920C1DD2E00766767 /* ScanBarcodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF31DCC320C1DD2E00766767 /* ScanBarcodeInteractor.swift */; };
+		EF70A9B320C28AFE00BF00D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF70A9B220C28AFE00BF00D2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0D2945A420354514D041A2 /* Pods-MyFridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFridgeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFridgeTests/Pods-MyFridgeTests.release.xcconfig"; sourceTree = "<group>"; };
+		46208F05F2545EB333D0BD15 /* Pods-MyFridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFridgeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFridgeUITests/Pods-MyFridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		492902BFF89FE76DF49B49BA /* Pods-MyFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFridge.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFridge/Pods-MyFridge.release.xcconfig"; sourceTree = "<group>"; };
+		4DAD4482582A02ECCB986B56 /* Pods-MyFridgeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFridgeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFridgeUITests/Pods-MyFridgeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		727B961CAEB4A53865B62D61 /* Pods_MyFridgeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFridgeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C82EF2B4364578EFCCC61DB /* Pods_MyFridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A41228F31AC6E6622D853F6 /* Pods-MyFridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFridgeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFridgeTests/Pods-MyFridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E74C798251D242392EF3BB6D /* Pods-MyFridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFridge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFridge/Pods-MyFridge.debug.xcconfig"; sourceTree = "<group>"; };
 		EF31DC7920C1D28100766767 /* MyFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF31DC7C20C1D28100766767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF31DC8120C1D28100766767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +69,8 @@
 		EF31DCC120C1DD2E00766767 /* ScanBarcodeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBarcodeModels.swift; sourceTree = "<group>"; };
 		EF31DCC220C1DD2E00766767 /* ScanBarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBarcodeViewController.swift; sourceTree = "<group>"; };
 		EF31DCC320C1DD2E00766767 /* ScanBarcodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBarcodeInteractor.swift; sourceTree = "<group>"; };
+		EF70A9B220C28AFE00BF00D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCBC0B1466F20F5826108C2E /* Pods_MyFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19F3EB8B749E12BB2A83FE3 /* Pods_MyFridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643F12E1CE25D8CB81E794B9 /* Pods_MyFridgeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75357915EA747D7523AD1572 /* Pods_MyFridgeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45C545879D9FCFE8559F760B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E74C798251D242392EF3BB6D /* Pods-MyFridge.debug.xcconfig */,
+				492902BFF89FE76DF49B49BA /* Pods-MyFridge.release.xcconfig */,
+				9A41228F31AC6E6622D853F6 /* Pods-MyFridgeTests.debug.xcconfig */,
+				0D0D2945A420354514D041A2 /* Pods-MyFridgeTests.release.xcconfig */,
+				46208F05F2545EB333D0BD15 /* Pods-MyFridgeUITests.debug.xcconfig */,
+				4DAD4482582A02ECCB986B56 /* Pods-MyFridgeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1B2364534B09FA327B0894D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCBC0B1466F20F5826108C2E /* Pods_MyFridge.framework */,
+				727B961CAEB4A53865B62D61 /* Pods_MyFridgeTests.framework */,
+				8C82EF2B4364578EFCCC61DB /* Pods_MyFridgeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF31DC7020C1D28100766767 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +131,8 @@
 				EF31DC9020C1D28200766767 /* MyFridgeTests */,
 				EF31DC9B20C1D28200766767 /* MyFridgeUITests */,
 				EF31DC7A20C1D28100766767 /* Products */,
+				45C545879D9FCFE8559F760B /* Pods */,
+				E1B2364534B09FA327B0894D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +149,7 @@
 		EF31DC7B20C1D28100766767 /* MyFridge */ = {
 			isa = PBXGroup;
 			children = (
+				EF70A9B220C28AFE00BF00D2 /* GoogleService-Info.plist */,
 				EF31DCAC20C1D60E00766767 /* Models */,
 				EF31DCAB20C1D60400766767 /* Services */,
 				EF31DCAA20C1D5FD00766767 /* Scenes */,
@@ -179,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF31DCA120C1D28200766767 /* Build configuration list for PBXNativeTarget "MyFridge" */;
 			buildPhases = (
+				FFD0A7F9996253D63060F622 /* [CP] Check Pods Manifest.lock */,
 				EF31DC7520C1D28100766767 /* Sources */,
 				EF31DC7620C1D28100766767 /* Frameworks */,
 				EF31DC7720C1D28100766767 /* Resources */,
+				12D4BAA2753403E620064D19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF31DCA420C1D28200766767 /* Build configuration list for PBXNativeTarget "MyFridgeTests" */;
 			buildPhases = (
+				ADF008B228A8C17B6CA05B7B /* [CP] Check Pods Manifest.lock */,
 				EF31DC8920C1D28200766767 /* Sources */,
 				EF31DC8A20C1D28200766767 /* Frameworks */,
 				EF31DC8B20C1D28200766767 /* Resources */,
@@ -214,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF31DCA720C1D28200766767 /* Build configuration list for PBXNativeTarget "MyFridgeUITests" */;
 			buildPhases = (
+				8E26588AA72DB1A53896C06C /* [CP] Check Pods Manifest.lock */,
 				EF31DC9420C1D28200766767 /* Sources */,
 				EF31DC9520C1D28200766767 /* Frameworks */,
 				EF31DC9620C1D28200766767 /* Resources */,
@@ -277,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF31DC8720C1D28200766767 /* LaunchScreen.storyboard in Resources */,
+				EF70A9B320C28AFE00BF00D2 /* GoogleService-Info.plist in Resources */,
 				EF31DC8420C1D28200766767 /* Assets.xcassets in Resources */,
 				EF31DC8220C1D28100766767 /* Main.storyboard in Resources */,
 			);
@@ -297,6 +345,85 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12D4BAA2753403E620064D19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyFridge/Pods-MyFridge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFridge/Pods-MyFridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E26588AA72DB1A53896C06C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFridgeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADF008B228A8C17B6CA05B7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFridgeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD0A7F9996253D63060F622 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFridge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF31DC7520C1D28100766767 /* Sources */ = {
@@ -480,6 +607,7 @@
 		};
 		EF31DCA220C1D28200766767 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E74C798251D242392EF3BB6D /* Pods-MyFridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lars Dahl (57L654T6F2)";
@@ -496,12 +624,13 @@
 				PROVISIONING_PROFILE = "461d4c65-98d8-469f-b6fb-4718e3bc2251";
 				PROVISIONING_PROFILE_SPECIFIER = "MyFridge Dev";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		EF31DCA320C1D28200766767 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 492902BFF89FE76DF49B49BA /* Pods-MyFridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lars Dahl (57L654T6F2)";
@@ -517,12 +646,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		EF31DCA520C1D28200766767 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A41228F31AC6E6622D853F6 /* Pods-MyFridgeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +674,7 @@
 		};
 		EF31DCA620C1D28200766767 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D0D2945A420354514D041A2 /* Pods-MyFridgeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -565,6 +696,7 @@
 		};
 		EF31DCA820C1D28200766767 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46208F05F2545EB333D0BD15 /* Pods-MyFridgeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -585,6 +717,7 @@
 		};
 		EF31DCA920C1D28200766767 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DAD4482582A02ECCB986B56 /* Pods-MyFridgeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

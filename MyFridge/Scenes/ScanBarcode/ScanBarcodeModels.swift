@@ -10,19 +10,23 @@ import UIKit
 
 enum ScanBarcode {
     
-    struct BarcodeData {
-        var value: String = ""
+    struct ItemData {
+        var itemName: String = ""
+        var barcode: String = ""
+        var quantity: Int = 0
     }
   
     struct Request {
-        var data: BarcodeData = BarcodeData()
+        var data: ItemData = ItemData()
     }
     
     struct Response {
-        var data: BarcodeData = BarcodeData()
+        var data: ItemData = ItemData()
     }
     
     struct ViewModel {
+        var itemName: String = ""
         var barcodeValue: String = ""
+        var quantity: Int = 0
     }
 }

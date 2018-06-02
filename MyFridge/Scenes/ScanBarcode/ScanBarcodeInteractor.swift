@@ -9,23 +9,41 @@
 import UIKit
 
 protocol ScanBarcodeBusinessLogic {
+    func saveItem(request: ScanBarcode.Request)
     func handleBarcodeFound(request: ScanBarcode.Request)
 }
 
 protocol ScanBarcodeDataStore {
-    // var name: String { get set }
+    
 }
 
 class ScanBarcodeInteractor: ScanBarcodeBusinessLogic, ScanBarcodeDataStore {
+    
     var presenter: ScanBarcodePresentationLogic?
     var worker: ScanBarcodeWorker?
-  
-    // MARK: Do something
+    
+    func saveItem(request: ScanBarcode.Request) {
+        worker = ScanBarcodeWorker()
+        worker?.addItem(itemName: request.data.itemName, barcode: request.data.barcode, quantity: request.data.quantity)
+        presenter?.itemSaved()
+    }
   
     func handleBarcodeFound(request: ScanBarcode.Request) {
+        worker = ScanBarcodeWorker()
+        let barcode = request.data.barcode
         var response = ScanBarcode.Response()
-        response.data.value = request.data.value
-    
-        presenter?.showBarcode(response: response)
+        response.data.barcode = barcode
+        
+        if (!barcode.isEmpty) {
+            worker?.fetchItem(barcode: barcode) { fetchedResponse in
+                if let fetchedResponse = fetchedResponse {
+                    self.presenter?.showItem(response: fetchedResponse)
+                } else {
+                    self.presenter?.showItem(response: response)
+                }
+            }
+        } else {
+            presenter?.showItem(response: response)
+        }
   }
 }

@@ -10,7 +10,8 @@ import UIKit
 import AVFoundation
 
 protocol ScanBarcodeDisplayLogic: class {
-    func displayBarcode(viewModel: ScanBarcode.ViewModel)
+    func displayItem(viewModel: ScanBarcode.ViewModel)
+    func itemSaved()
 }
 
 class ScanBarcodeViewController: UIViewController, ScanBarcodeDisplayLogic {
@@ -26,7 +27,7 @@ class ScanBarcodeViewController: UIViewController, ScanBarcodeDisplayLogic {
     @IBOutlet weak var itemQuantityLabel: UILabel!
     @IBOutlet weak var itemBarcodeLabel: UILabel!
     
-    var isDisplayingBarcode: Bool = false
+    var isProcessingBarcode: Bool = false
     
     var captureSession: AVCaptureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -150,21 +151,18 @@ class ScanBarcodeViewController: UIViewController, ScanBarcodeDisplayLogic {
         captureSession.stopRunning()
     }
 
-    func displayBarcode(viewModel: ScanBarcode.ViewModel) {
-        guard !isDisplayingBarcode else {
-            return
-        }
-        
-        isDisplayingBarcode = true
+    func displayItem(viewModel: ScanBarcode.ViewModel) {
+        itemNameTextField.text = viewModel.itemName
         itemBarcodeLabel.text = viewModel.barcodeValue
+        itemQuantityStepper.value = Double(viewModel.quantity)
+        itemQuantityLabel.text = String(viewModel.quantity)
+        
+        showComposer()
+    }
     
-        UIView.animate(withDuration: 0.3, animations: {
-            self.view.bringSubview(toFront: self.barcodeView)
-            self.barcodeViewConstraint.constant = -5
-            self.view.layoutIfNeeded()
-        }, completion: { done in
-            self.changeVideoPreviewLayerHeight(add: -190)
-        })
+    func itemSaved() {
+        hideComposer()
+        isProcessingBarcode = false
     }
     
     private func setUpPreviewViews() {
@@ -207,24 +205,52 @@ class ScanBarcodeViewController: UIViewController, ScanBarcodeDisplayLogic {
         videoPreviewLayer.frame = rect
     }
     
+    private func showComposer() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.bringSubview(toFront: self.barcodeView)
+            self.barcodeViewConstraint.constant = -5
+            self.view.layoutIfNeeded()
+        }, completion: { done in
+            self.changeVideoPreviewLayerHeight(add: -190)
+        })
+    }
+    
+    private func hideComposer() {
+        self.dismissKeyboard(nil)
+        self.changeVideoPreviewLayerHeight(add: 190)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.barcodeViewConstraint.constant = -200
+            self.view.layoutIfNeeded()
+        }, completion: { done in
+            self.view.sendSubview(toBack: self.barcodeView)
+        })
+    }
+    
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         itemQuantityLabel.text = "\(Int(sender.value))"
     }
     
     @IBAction func buttonCancelClicked(_ sender: UIButton) {
-        changeVideoPreviewLayerHeight(add: 190)
-        self.dismissKeyboard(nil)
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.sendSubview(toBack: self.barcodeView)
-            self.barcodeViewConstraint.constant = -200
-            self.view.layoutIfNeeded()
-            self.isDisplayingBarcode = false
-        }
+        hideComposer()
+        isProcessingBarcode = false
     }
     
     @IBAction func buttonSaveClicked(_ sender: UIButton) {
-        // TODO
+        guard let barcode = itemBarcodeLabel.text, barcode.count > 0 else {
+            return
+        }
+        
+        guard let itemName = itemNameTextField.text, itemName.count > 0 else {
+            return
+        }
+        
+        var request = ScanBarcode.Request()
+        request.data.itemName = itemName
+        request.data.barcode = barcode
+        request.data.quantity = Int(itemQuantityStepper.value)
+        
+        interactor?.saveItem(request: request)
     }
     
     deinit {
@@ -241,6 +267,11 @@ extension ScanBarcodeViewController: AVCaptureMetadataOutputObjectsDelegate {
             return
         }
         
+        guard !isProcessingBarcode else {
+            print("Already processing barcode")
+            return
+        }
+        
         let metadataObject = metadataObjects.first as! AVMetadataMachineReadableCodeObject
         if supportedMetadataObjectTypes.contains(metadataObject.type) {
             if let barcodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObject) {
@@ -248,8 +279,10 @@ extension ScanBarcodeViewController: AVCaptureMetadataOutputObjectsDelegate {
             }
             
             if let value = metadataObject.stringValue {
+                isProcessingBarcode = true
+                
                 var request = ScanBarcode.Request()
-                request.data.value = value
+                request.data.barcode = value
                 
                 interactor?.handleBarcodeFound(request: request)
             }
